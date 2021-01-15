@@ -1,0 +1,29 @@
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+// SYSTEM DYNAMICS
+
+#include <iostream>
+#include "systemDynamic.hpp"
+
+using namespace std;
+
+int main()
+{
+    SYSTEM_PARAMETERS sys1;
+
+    sys1.dt = 0.1;
+    sys1.firstParam = -1;
+    sys1.secondParam = 10;
+    sys1.t_initial = 0.0;
+    sys1.t_final = 5.0;
+    sys1.x0 = 0.0;
+
+    forwardDifferenceSolver(sys1);
+    centralDifferenceSolver(sys1);
+    backwardDifferenceSolver(sys1);
+
+    return 0;
+}
+// SYSTEM DYNAMICS
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
